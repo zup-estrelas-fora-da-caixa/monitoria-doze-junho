@@ -8,7 +8,8 @@ public class Pessoa {
 	private String nome;
 	private String corDeOlhos;
 	private int idade;
-	private List<String> amigos;
+					//Durante a monitoria faltou o "new ArrayList<String>();" no atributo.
+	private List<String> amigos = new ArrayList<String>();
 	
 	public Pessoa(String nome, int idade, String corDeolhos) {
 		this.idade = idade;
@@ -50,9 +51,7 @@ public class Pessoa {
 		return modelo;
 	}
 	
-	//Durante a monitoria faltou o "new ArrayList<String>();" no metodo.
 	public void adicionarAmigo(String nome) {
-		this.amigos = new ArrayList<String>();
 		this.amigos.add(nome);
 	}
 	
